@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Regalo: Carta + Test</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <main class="app">
+
+    <header class="topbar">
+      <h1 class="brand">Para ti 💘</h1>
+      <p class="subtitle">test para verificar si Laura esta enojada xD</p>
+    </header>
+
+    <!-- PANTALLA: CARTA -->
+    <section id="screenLetter" class="card screen active">
+      <h2 id="letterTitle" class="title">Antes de empezar…</h2>
+
+      <p id="letterText" class="text">
+        Presiona “Sí” si no estás enojada conmigo 
+      </p>
+
+      <div class="media">
+        <img id="letterImg" src="" alt="Imagen de la carta"/>
+      </div>
+
+      <div class="actions">
+        <button id="btnNo" class="btn ghost">No ❌</button>
+        <button id="btnYes" class="btn primary">Sí ✅</button>
+      </div>
+
+      <p id="letterHint" class="hint"></p>
+    </section>
+
+    <!-- PANTALLA: QUIZ -->
+    <section id="screenQuiz" class="card screen">
+      <div class="quizHeader">
+        <h2 class="title">Mini Test</h2>
+        <p class="text"><span id="progress">1</span>/<span id="total">3</span></p>
+      </div>
+
+      <h3 id="questionTitle" class="questionTitle">Pregunta aquí</h3>
+      <p id="questionDesc" class="text">Descripción aquí</p>
+
+      <div class="options" id="options"></div>
+
+      <div class="actions">
+        <button id="btnNext" class="btn primary" disabled>Siguiente ➜</button>
+      </div>
+
+      <p id="quizHint" class="hint"></p>
+    </section>
+
+    <!-- PANTALLA: CONFIRMACIÓN (ENVIAR O REINICIAR) -->
+    <section id="screenConfirm" class="card screen">
+      <h2 class="title">¿Deseas terminar con el test?</h2>
+      <p class="text">
+        Si confirmas, se enviarán tus respuestas y se cerrará el test.
+        Si reinicias, podrás hacerlo de nuevo.
+      </p>
+
+      <div class="actions">
+        <button id="btnConfirmSend" class="btn primary">Confirmar y enviar ✅</button>
+        <button id="btnConfirmRestart" class="btn ghost">Reiniciar 🔁</button>
+      </div>
+
+      <p id="confirmHint" class="hint"></p>
+    </section>
+
+    <!-- PANTALLA: FINAL -->
+    <section id="screenEnd" class="card screen">
+      <h2 class="title">Resultado final</h2>
+      <p class="text" id="finalMessage">
+        Listo. Aquí está tu doc.text con lo que elegiste.
+      </p>
+
+      <section class="doc">
+        <div class="docHeader">
+          <h3 class="docTitle">doc.text</h3>
+          <p class="docMeta" id="docMeta">Generado al finalizar</p>
+        </div>
+
+        <textarea id="docText" class="docBody" readonly>Aquí se generarán tus respuestas…</textarea>
+
+        <div class="actions docActions">
+          <button id="btnCopy" class="btn ghost">Copiar</button>
+          <button id="btnDownload" class="btn primary">Descargar .txt</button>
+          <button id="btnSendWA" class="btn primary">Enviar por WhatsApp 🎁</button>
+          <button id="btnRestart" class="btn ghost">Reiniciar</button>
+        </div>
+
+      </section>
+    </section>
+
+    <footer class="footer">
+      <small>Hecho por Mi Rodrigo tu papi </small>
+    </footer>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
